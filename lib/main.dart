@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:suvile/common/constant.dart';
+import 'package:suvile/common/theme/theme.dart';
 import 'package:suvile/screens/home.dart';
 
 void main() {
@@ -10,9 +12,10 @@ class SuvileApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Suvile WMS',
-      home: HomeScreen(),
+      home: const HomeScreen(),
+      theme: themeApp,
     );
   }
 }
