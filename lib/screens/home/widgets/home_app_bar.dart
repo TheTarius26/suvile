@@ -25,13 +25,10 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   Container searchField(BuildContext context) {
-    var hintStyle = Theme.of(context)
+    final hintStyle = Theme.of(context)
         .textTheme
         .subtitle1
         ?.copyWith(color: Colors.white.withOpacity(0.5));
-
-    var textStyle =
-        Theme.of(context).textTheme.subtitle1?.copyWith(color: Colors.white);
 
     final inputDecoration = InputDecoration(
       border: InputBorder.none,
@@ -42,6 +39,9 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
         color: Colors.white,
       ),
     );
+
+    final textStyle =
+        Theme.of(context).textTheme.subtitle1?.copyWith(color: Colors.white);
 
     final boxDecoration = BoxDecoration(
       color: kPrimary.withOpacity(0.5),
@@ -60,7 +60,7 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   InkWell menuButton() {
-    const boxDecoration = BoxDecoration(
+    const decoration = BoxDecoration(
       color: kPrimary,
       shape: BoxShape.circle,
     );
@@ -71,7 +71,7 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
       child: Container(
         width: 50,
         height: 50,
-        decoration: boxDecoration,
+        decoration: decoration,
         child: const Icon(Icons.menu, color: Colors.white),
       ),
     );
